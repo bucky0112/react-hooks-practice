@@ -1,24 +1,25 @@
-import React, { useState } from 'react'
-import Accordion from './Accordion'
+import React from 'react'
+// import Accordion from './Accordion'
 // import Search from './Search'
-import Dropdown from './Dropdown'
+// import Dropdown from './Dropdown'
+import Translate from './Translate'
 
-const item = [
+const items = [
   {
-    title: 'Bikini',
-    content: '123'
+    title: 'What is React?',
+    content: 'React is a front end javascript framework'
   },
   {
-    title: 'Smile',
-    content: '456'
+    title: 'Why use React?',
+    content: 'React is a favorite JS library among engineers'
   },
   {
-    title: 'Happy',
-    content: '789'
+    title: 'How do you use React?',
+    content: 'You use React by creating components'
   }
 ]
 
-const option = [
+const options = [
   {
     label: 'The Color Red',
     value: 'red'
@@ -28,22 +29,15 @@ const option = [
     value: 'green'
   },
   {
-    label: 'The Shade of Blue',
+    label: 'A Shade of Blue',
     value: 'blue'
   }
 ]
 
 function App() {
-  const [selected, setSelected] = useState(option[0])
-
   return (
     <div>
-      {/* <Accordion item={item} /> */}
-      <Dropdown
-        onSelectedChange={setSelected}
-        selected={selected}
-        options={option}
-      />
+      <Translate />
     </div>
   )
 }
